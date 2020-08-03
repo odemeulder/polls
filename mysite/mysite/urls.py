@@ -17,6 +17,10 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+    # Front end
+    path('', include('frontend.urls')),
+    # api
     path('polls/', include('polls.urls')),
+    # admin
     path('admin/', admin.site.urls),
 ]
